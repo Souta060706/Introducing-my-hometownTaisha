@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大社地域の紹介</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('brown.jpg'); /* 背景画像 */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* 半透明の背景 */
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .src {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            overflow: hidden; 
+        }
+
+            .src img {
+                width: 80%;
+                max-width: 300px;
+                opacity: 0; 
+                transform: translateX(100%); 
+                animation: slideIn 1.5s ease-out forwards;
+            }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .home-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #ff4500;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+            .home-button:hover {
+                background-color: #cc3700;
+            }
+        .kami-mukae {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+
+            .kami-mukae h2 {
+                font-size: 24px;
+                color: #005f6a;
+                margin-bottom: 10px;
+            }
+
+            .kami-mukae p {
+                font-size: 18px;
+                line-height: 1.6;
+            }
+
+            .kami-mukae img {
+                width: 80%;
+                max-width: 300px;
+                margin-top: 20px;
+            }
+
+      
+        .countdown-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff4500; /
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>大社地域の紹介</h1>
+        <p>
+            大社地域は、島根半島の最西端に位置する、海に囲まれた自然豊かな街です。<br />
+            出雲大社の門前町として古くから栄え、神々の国出雲の象徴である出雲大社には多くの観光客が訪れます。また半島先には日御碕神社や東大もあり、断崖絶壁が続くのは大きな見所です。
+            <br />また、島根ブランドとして評価の高いブドウの一大生産地として知られ、ワイナリーではワインを製造、出荷などで屈指の観光スポットとしてにぎわっています。
+        </p>
+        <div class="src">
+            <img src="taisya.png" alt="大社地域の画像" />
+        </div>
+
+        <!-- 神迎神事 -->
+        <section class="kami-mukae">
+            <h2>神迎まつりとは？</h2>
+            <p>
+                神迎まつり（かみむかえまつり）は、全国の八百万の神々が出雲に集う神秘的な祭典です。
+                毎年旧暦の10月10日（2025年は11月29日）、稲佐の浜で行われます。
+            </p>
+
+            <div class="festival-details">
+                <img src="inasanohama.jpg" alt="稲佐の浜の神迎神事">
+                <p>
+                    夜の稲佐の浜にて、出雲大社の神職たちが「神迎えの神事」を執り行います。
+                    かがり火が焚かれ、祝詞が奏上される中、神々を迎える神秘的な儀式が行われます。
+                </p>
+            </div>
+
+            <h3>神迎まつりの流れ</h3>
+            <ul>
+                <li><strong>19:00：</strong>神職が神迎の祝詞を唱え、神々を迎える</li>
+                <li><strong>19:30：</strong>参拝者が静かに祈りを捧げる</li>
+                <li><strong>20:00：</strong>神々が出雲大社へ向かう</li>
+            </ul>
+
+            <h3>出雲大社の「神在月」</h3>
+            <p>
+                神迎まつりが終わると、神々は「神在祭（かみありさい）」を行うため出雲大社へ向かいます。
+                他の地域では神様がいなくなる「神無月」ですが、出雲では「神在月（かみありづき）」と呼ばれます。
+            </p>
+
+            <p class="highlight">
+                2025年の神迎まつりは<strong>11月29日</strong>に開催予定。<br>
+                神々が集う神秘的な瞬間を、ぜひ体験してください。
+            </p>
+
+            <p>神々をお迎えする神迎神事は<strong>11月29日19時から</strong>です。</p>
+
+            <div class="countdown-text" id="countdown"></div> 
+        </section>
+
+        <a href="index.html" class="home-button">ホーム</a>
+    </div>
+
+    <script>
+       
+        const countDownDate = new Date("Nov 29, 2025 19:00:00").getTime();
+
+        const countdownFunction = setInterval(function () {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = "神迎祭りまで"+days + "日 " + hours + "時間 "
+                + minutes + "分 " + seconds + "秒 ";
+
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "神迎神事が始まりました！";
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>

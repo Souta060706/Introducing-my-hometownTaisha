@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日御碕の紹介</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: orange;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .src {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+            .src img {
+                width: 80%;
+                max-width: 300px;
+                opacity: 0;
+                transform: translateX(100%);
+                animation: slideIn 1.5s ease-out forwards;
+            }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .home-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #ff4500;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+            .home-button:hover {
+                background-color: #cc3700;
+            }
+
+        .map-container {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>日御碕の紹介</h1>
+        <p>
+            出雲日御碕灯台は、100年以上の歴史をもつ高さ約44メートルの白い塔で、
+            その高さは石造りの灯台としては日本一の高さを誇ります。人が簡単には近づくことができないため、
+            この地特有の自然環境が広い範囲で手つかずのまま残っています。
+        </p>
+        <p>
+            鮮やかな朱色に彩られている日御碕神社の社殿の1つ「日沉宮（ひしずみのみや）」には、
+            天照大御神が祀られており、夕日を象徴する社殿とされています。
+        </p>
+        <p>
+            毎月8月7日に行われる御幸（みゆき）神事は夕日の祭りとも言われ、
+            日本海に沈む美しい夕日を背景に、社殿や経島で行われる神事を見学することができます。
+        </p>
+        <p>日御碕に行ったら食べに行ってほしい店は花房です。ぜひ海鮮を楽しんでください。</p>
+
+        <div class="src">
+            <img src="hanahusa.jpg" alt="花房の料理">
+        </div>
+
+        <a href="https://tabelog.com/shimane/A3202/A320201/32000232/" class="home-button">花房の食べログ</a>
+
+        <!-- Googleマップ埋め込み -->
+        <div class="map-container">
+            <h2>花房から日御碕灯台へのルート</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d4163.030941141076!2d132.62828625199876!3d35.43172098446581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x35575e9fe73a04af%3A0x498571a42402ef09!2z6Iqx5oi_44CB44CSNjk5LTA3NjMg5bO25qC555yM5Ye66Zuy5biC5aSn56S-55S65pel5b6h56KV77yR77yU77yY77yR4oiS77yR!3m2!1d35.431540999999996!2d132.62900399999998!4m5!1s0x35575c209d62fdcb%3A0xff48b1cb937150be!2z5Ye66Zuy5pel5b6h56KV54Gv5Y-wIOOAkjY5OS0wNzYzIOWztuagueecjOWHuumbsuW4guWkp-ekvueUuuaXpeW-oeeilTE0Nzg!3m2!1d35.4337614!2d132.6293593!5e1!3m2!1sja!2sjp!4v1739346704178!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+            
+
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>稲佐の浜の紹介</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .src {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            overflow: hidden; /* 画像のはみ出しを防ぐ */
+        }
+
+            .src img {
+                width: 80%;
+                max-width: 300px;
+                opacity: 0; /* 初めは非表示 */
+                transform: translateX(100%); /* 初めは画面外（右）に */
+                animation: slideIn 1.5s ease-out forwards; /* 1.5秒でスライド */
+            }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .home-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #ff4500;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+            .home-button:hover {
+                background-color: #cc3700;
+            }
+        .map-container {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>稲佐の浜の紹介</h1>
+        <p>
+            出雲大社の西方1kmにある海岸で、国譲り、国引きの神話で知られる浜。
+            <br>また、この浜は旧暦10月10日に、全国の八百万の神々をお迎えする浜でもあります。
+        </p>
+        <p>
+            2021年まで、海水浴場として親しまれ、僕もよく友人と遊びに行ってましたが、離岸流がよく発生し何度もしを覚悟したため行くのをやめました。
+        </p>
+        <p>
+            稲佐の浜付近に行ったら食べに行ってほしい店は砂屋です。僕が知る限り大社の蕎麦屋で最もおいしい十割そばです。
+            そばが苦手な人もきっと好きになります。是非食べてください。
+        </p>
+        <div class="src">
+            <img src="sunaya.jpg" alt="砂屋のそば">
+        </div>
+        <a href="https://www.sunaya-izumosoba.com/" class="home-button">出雲砂屋のホームページへ</a>
+        <div class="map-container">
+            <h2>砂屋から稲佐の浜へのルート</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d4200.006604856468!2d132.6777523094729!3d35.398362427749284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x35575c98640a522d%3A0xa7c5cd3d1457530d!2z56CC5bGL44CB44CSNjk5LTA3MTEg5bO25qC555yM5Ye66Zuy5biC5aSn56S-55S65p2156-J5Y2X77yX77yX77ySIDJG!3m2!1d35.3961197!2d132.6867408!4m5!1s0x35575c865ebd4133%3A0x6746cc333009b799!2z56iy5L2Q44Gu5rWc44CB44CSNjk5LTA3MDIg5bO25qC555yM5Ye66Zuy5biC5aSn56S-55S65p2156-J5YyX!3m2!1d35.400332!2d132.6723669!5e1!3m2!1sja!2sjp!4v1739347062878!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+            </div>
+        </div>
+
+</body>
+</html>

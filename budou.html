@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>島根ワイナリーの紹介</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: purple;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .image-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+            .image-container img {
+                width: 40%;
+                max-width: 300px;
+                opacity: 0;
+                transform: translateX(100%);
+                animation: slideIn 1.5s ease-out forwards;
+            }
+
+                .image-container img:nth-child(2) {
+                    animation-delay: 0.5s;
+                }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* ホームボタンのスタイル */
+        .home-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #ff4500;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+            .home-button:hover {
+                background-color: #cc3700;
+            }
+        .map-container {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>島根ワイナリーの紹介</h1>
+        <p>
+            島根ワイナリーは、出雲市にある観光施設で、島根県産のぶどうを使用したワインを製造・販売しています。
+            試飲コーナーでは様々な種類のワインを無料で楽しむことができ、ワイン好きにはたまらないスポットです。
+        </p>
+        <p>
+            また、ノンアルコールのぶどうジュースも販売されており、家族連れでも楽しめます。
+            施設内のレストランでは、ワインと一緒に地元の美味しい料理を味わうことができます。
+        </p>
+
+        <div class="image-container">
+            <img src="budou.jpg" alt="ぶどうの画像">
+            <img src="ju-su.jpg" alt="ぶどうジュースの画像">
+        </div>
+
+        <!-- ホームボタン -->
+     
+        <a href="https://www.shimane-winery.jp/" class="home-button">島根ワイナリーのホームページへ</a>
+        <div class="map-container">
+            <h2>ワイナリーから出雲大社へのルート</h2>
+          
+            <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d8037.654677514129!2d132.6938312592307!3d35.39603538018209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x35575c942a56193d%3A0x706a6aaefcba84ef!2z5Ye66Zuy5aSn56S-!3m2!1d35.4018692!2d132.6854693!4m5!1s0x35574335eba45d69%3A0x512a32f94f311b5d!2z5bO25qC544Ov44Kk44OK44Oq44O844CB44CSNjk5LTA3MzMg5bO25qC555yM5Ye66Zuy5biC5aSn56S-55S66I-x5qC577yS77yW77yU4oiS77yS!3m2!1d35.395741099999995!2d132.7111878!5e1!3m2!1sja!2sjp!4v1739347800831!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+</body>
+</html>
